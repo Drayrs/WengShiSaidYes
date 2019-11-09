@@ -1,15 +1,67 @@
 <form action="https://usebasin.com/f/c41aeb0962d6" method="POST">
-  <label for="name">Guest:</label>
-  <input type="text" name="name" required>
   
-  <label for="diet">Dietary Restrictions?</label>
-  <input type="checkbox" name="diet">
+  <div>
+    <label>First Name</label>
+    <input type="text" name="first_name" required>
+  </div>
   
-  <label for="plus1">+1?</label>
-  <input type="checkbox" name="plus1">
+  <div>
+    <label>Last Name</label>
+    <input type="text" name="last_name" required>
+  </div>
   
-  <label for="plus1name">+1's Name:</label>
-  <input type="text" name="plus1name">
+  <div>
+    <label>Entree</label>
+    <input type="text" name="entree" required>
+  </div>
+  
+  <div>
+    <label>Diet</label>
+    <input type="text" name="diet" required>
+  </div>
+  
+  <div>
+    <label>Plus One?</label>
+    <input type="checkbox" name="plus_1" required>
+  </div>
+  
+  <div>
+    <label>First Name</label>
+    <input type="checkbox" name="plus_first_name" required>
+  </div>
+  
+  <div>
+    <label>Last Name</label>
+    <input type="checkbox" name="plus_last_name" required>
+  </div>
+  
+  <div>
+    <label>Entree</label>
+    <input type="checkbox" name="plus_entree" required>
+  </div>
+  
+  <div>
+    <label>Diet</label>
+    <input type="checkbox" name="plus_diet" required>
+  </div>
   
   <button type="submit">Submit</button>
 </form>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js">
+<script>
+  var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/abcdefghijklmnopqrstuvwxyz1234567890/exec'
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
+</script>
