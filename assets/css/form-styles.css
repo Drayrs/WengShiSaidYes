@@ -1,0 +1,99 @@
+#RSVP {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5vw;
+    width: 30vw;
+    height: 100vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vw;
+    border-right: solid 1px black;
+    color: #b78278;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#RSVP > div:last-child {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.form-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1vw;
+}
+
+.form-flex label {
+    flex-grow: 0;
+    flex-basis: 25%;
+    font-size: 1.2vw;
+}
+
+#RSVP > legend {
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+
+#RSVP fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1vw;
+}
+
+#RSVP > label,
+#RSVP > div > label {
+    display: block;
+    margin-bottom: 1vw;
+}
+
+#RSVP input[type=text],
+#RSVP textarea {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5vw;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 0.5vw;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    margin-bottom: 1vw;
+    color: #eaadad;
+    resize: none;
+    overflow-y: hidden;
+}
+
+#RSVP input[type=checkbox],
+#RSVP input[type=radio] {
+    margin: 0;
+    padding: 0;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+#RSVP input[type=submit] {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    border: 0;
+    border-radius: 0.5vw;
+    width: 100%;
+    padding: 10px;
+    background-color: #92374d;
+    color: white;
+    margin-bottom: 1vw;
+}
