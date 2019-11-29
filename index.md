@@ -1,6 +1,3 @@
 ---
-title: Home
+title: wengshisaidyes
 ---
-# Hello World
-
-What's going on?

@@ -1,6 +1,10 @@
-- name: Anna & Daniel
+- name: When
   link: /
-- name: When & Where
+- name: Where
   link: /
 - name: Accommodations
+  link: /
+- name: FAQ
+  link: /
+- name: RSVP
   link: /

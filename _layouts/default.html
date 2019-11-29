@@ -2,113 +2,40 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,700,700i|Petit+Formal+Script&display=swap" rel="stylesheet">
+    <title>{{ page.title }}</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&display=swap" rel="stylesheet">
     <!--https://jekyllrb.com/docs/github-pages/-->
     <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/form-styles.css"  | relative_url }}">
   </head>
   <body>
       <div class="parallax-container">
           <div class="background bg1">
-              <div class="background-buffer"></div>
-              <div id="venue" class="background-section">
-                  <h1 class="anna">June 28th, 2020</h1>
-                  <div id="venue-address" class="address bridesmaid">
-                      <h2 class="bridesmaid-ts">Nestleton Waters Inn</h2>
-                      <p>3440 Beacock Rd</p>
-                      <p>Nestleton Station, ON</p>
-                      <p>L0B 1L0</p>
-                  </div>
-                  <div id="venue-timing" class="anna">
-                      <span>4:30 pm</span><div></div><span>11:00 pm</span>
+              <div class="buffer" id="buffer-when"></div>
+              <div class="buffer">
+                  <div class="placeholder"></div>
+                  <div class="content">
+                      <h1 id="date" class="hand scrawl-ccw anna">Sunday, June 28th, 2020</h1>
+                      <h2 id="time" class="hand scrawl-ccw bridesmaid">4.30 pm ~ 11.30 pm</h2>
                   </div>
               </div>
-              <div id="hotel" class="background-section">
-                  <h2 class="dan">A block of rooms has been set aside for guests at:</h2>
-                  <div id="hotel-address" class="address bridesmaid">
-                      <h2 class="bridesmaid-ts">Comfort Inn & Suites Bowmanville</h2>
-                      <p>5 Spicer Square</p>
-                      <p>Bowmanville, ON</p>
-                      <p>L1C 5M2</p>
-                  </div>
-                  <div class="dotdot"></div>
-                  <div id="hotel-timing" class="dan">
-                      <img src="assets/images/noun_Bus_2491103.svg"/>
-                      <section>
-                          <p>Bus transport from hotel leaves at <u>3:30 pm</u></p>
-                          <p>and leaves to return to hotel at <u>11:00 pm</u></p>
-                      </section>
-                  </div>
+              <div class="buffer" id="buffer-where"></div>
+              <div class="buffer">
+                  <div class="content"></div>
+                  <div class="placeholder"></div>
+              </div>
+              <div class="buffer" id="buffer-hotel"></div>
+              <div class="buffer">
+                  <div class="content"></div>
+                  <div class="placeholder"></div>
+              </div>
+              <div class="buffer" id="buffer-faq"></div>
+              <div class="buffer">
+                  <div class="content"></div>
+                  <div class="placeholder"></div>
               </div>
           </div>
-          <div class="foreground">
-              <div class="foreground-buffer"></div>
-              <div class="foreground-section">
-                  <img src="assets/images/057.JPG" class="foreground-splash">
-              </div>
-              <div class="foreground-section">
-              </div>
-              <!--<div id="title">
-                  <h1><span class="anna">Anna </span><b>&</b><span class="dan"> Daniel</span></h1>
-                  <img src="assets/images/title-underline.svg"/>
-              </div>-->
-              <!--<div class="foreground-section p132">
-                  <form id="RSVP" class="bg1" action="/">
-                      <div>
-                          <fieldset>
-                              <legend>Invitee</legend>
-                              <input type="text" id="name" placeholder="Full Name">
-                              <label>Any Dietary Restrictions?</label>
-                              <div class="form-flex">
-                                  <label><input type="checkbox" name="diet" value="vegetarian">Vege</label>
-                                  <label><input type="checkbox" name="diet" value="vegan">Vegan</label>
-                                  <label><input type="checkbox" name="diet" value="halal">Halal</label>
-                                  <label><input type="checkbox" name="diet" value="kosher">Kosher</label>
-                                  <label><input type="checkbox" name="diet" value="dairy">Dairy</label>
-                                  <label><input type="checkbox" name="diet" value="nuts">Nuts</label>
-                                  <label><input type="checkbox" name="diet" value="other">Other</label>
-                              </div>
-                              <label>Entrée</label>
-                              <div class="form-flex">
-                                  <label><input type="radio" name="entree" value="chicken">Chicken</label>
-                                  <label><input type="radio" name="entree" value="beef">Beef</label>
-                                  <label><input type="radio" name="entree" value="fish">Fish</label>
-                              </div>
-                          </fieldset>
-                          <label for="guest">Are you bringing a guest?<input id="guest" type="checkbox">
-                          </label>
-                          <fieldset>
-                              <legend>Guest</legend>
-                              <input type="text" id="guest-name" placeholder="Full Name"/>
-                              <label>Any Dietary Restrictions?</label>
-                              <div class="form-flex">
-                                  <label><input type="checkbox" name="guest-diet" value="vegetarian">Vege</label>
-                                  <label><input type="checkbox" name="guest-diet" value="vegan">Vegan</label>
-                                  <label><input type="checkbox" name="guest-diet" value="halal">Halal</label>
-                                  <label><input type="checkbox" name="guest-diet" value="kosher">Kosher</label>
-                                  <label><input type="checkbox" name="guest-diet" value="dairy">Dairy</label>
-                                  <label><input type="checkbox" name="guest-diet" value="nuts">Nuts</label>
-                                  <label><input type="checkbox" name="guest-diet" value="other">Other</label>
-                              </div>
-                              <label>Entrée</label>
-                              <div class="form-flex">
-                                  <label><input type="radio" name="guest-entree" value="chicken">Chicken</label>
-                                  <label><input type="radio" name="guest-entree" value="beef">Beef</label>
-                                  <label><input type="radio" name="guest-entree" value="fish">Fish</label>
-                              </div>
-                          </fieldset>
-                          <label>
-                              <div>Any song requests?</div>
-                              <textarea name="name" rows="2"></textarea>
-                          </label>
-                      </div>
-                      <div>
-                          <input type="submit" value="RSVP">
-                      </div>
-                  </form>
-              </div>
--->
-          </div>
+          {% include foreground.html %}
       </div>
       {% include navigation.html %}
   </body>

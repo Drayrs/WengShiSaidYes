@@ -1,0 +1,69 @@
+$bg1:        #fff;
+
+$col-header: #222;
+$col-header-diff: #ddd;
+$col-anna:   #92374d;
+$col-anna-diff: #6dc8b1;
+$col-maid1-diff: #155252;
+$col-dan:    #cce8cc;
+$col-maid1:  #eaadad;
+$col-maid2:  #b78278;
+
+$f-header: 'Work Sans', sans-serif;
+$f-hand: 'Caveat', cursive;
+
+body {
+    font-family: $f-header;
+    font-weight: 200;
+}
+
+h1, h2 {
+    font-weight: inherit;
+}
+
+#overlay {
+    color: $col-header-diff;
+
+    .mask {
+        color: $col-maid1-diff;
+    }
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hand {
+    font-family: $f-hand;
+}
+
+.scrawl-cw {
+    position: relative;
+    display: inline-block;
+    transform-origin: bottom right;
+    transform: rotate(3deg);
+}
+
+.scrawl-ccw {
+    position: relative;
+    display: inline-block;
+    transform-origin: bottom left;
+    transform: rotate(-3deg);
+}
+
+.bg1 {
+    background-color: $bg1;
+}
+
+.bridesmaid {
+    color: $col-maid1;
+}
+
+.dan {
+    color: $col-dan;
+}
+
+.anna {
+    color: $col-anna;
+}

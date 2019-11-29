@@ -1,0 +1,6 @@
+- src: 202
+  type: splash
+  z: 3
+- src: 146
+  type: left
+  z: 3

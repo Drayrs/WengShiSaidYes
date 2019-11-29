@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+}
+
+body {
+    margin: 0;
+    font-size: 2.5vh;
+}
+
+h1, h2, h3, p {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    transform: translateZ(0px);
+
+    .buffer {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.placeholder {
+    flex-grow: 0;
+    width: 30vw;
+}
+
+.content {
+    flex: 1 1 0;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#buffer-when {
+    height: 120vh;
+
+    + .buffer .content {
+        text-align: center;
+    }
+}
+
+#buffer-where {
+    height: 100vh;
+}
+
+#buffer-hotel {
+
+}
+
+#buffer-faq {
+
+}
