@@ -3,4 +3,10 @@
   z: 3
 - src: 146
   type: left
+  z: 2
+- src: 132
+  type: left
+  z: 2
+- src: mapbox
+  type: center
   z: 3
