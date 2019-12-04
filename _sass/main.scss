@@ -1,3 +1,6 @@
+$outside-padding: 3vw;
+$nav-padding: 5vw;
+
 * {
     box-sizing: border-box;
     -moz-osx-font-smoothing: grayscale;
@@ -20,7 +23,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .background {
@@ -28,8 +31,6 @@ h2 {
     top: 0;
     left: 0;
     right: 0;
-    padding-left: 3vw;
-    padding-right: 3vw;
     transform: translateZ(0px);
 
     .buffer {
@@ -38,22 +39,61 @@ h2 {
     }
 }
 
+.buffer {
+    margin-left: $outside-padding;
+    margin-right: $outside-padding;
+}
+
+.snap {
+    scroll-snap-align: start;
+}
+
 .placeholder {
     flex-grow: 0;
-    width: 30vw;
+    margin-left: 0;
+    margin-right: 2em;
 }
 
 .content {
     flex: 1 1 0;
-    padding-left: 1em;
-    padding-right: 1em;
+    text-align: left;
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    p {
+        margin-bottom: 0.5em;
+    }
+}
+
+.content + .placeholder {
+    margin-left: 1em;
+    margin-right: 0;
+}
+
+#buffer-splash {
+    height: 100vh;
 }
 
 #buffer-when {
-    height: 120vh;
+    height: 40vh;
+}
 
-    + .buffer .content {
-        text-align: center;
+#content-when {
+    height: 40vh;
+
+    .placeholder {
+        width: 30%;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 }
 
@@ -62,9 +102,33 @@ h2 {
 }
 
 #buffer-hotel {
+    height: 15vh;
+}
 
+#content-hotel {
+    height: 85vh;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .placeholder {
+        width: 60%;
+    }
+}
+
+.event-times {
+    text-align: right;
+    margin-right: 1em;
+    color: #92374d;
 }
 
 #buffer-faq {
+    height: 100vh;
+}
 
+#img-nwi {
+    width: 75%;
 }

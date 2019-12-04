@@ -1,24 +1,19 @@
-{% for i in (1..3) %}
-    {% assign depth = i %}
-    <div class="foreground depth-{{ depth }}">
-        {% for image in site.data.parallax %}
-            {% if image.z == depth %}
-                <div class="buffer" id="buffer-{{ image.src }}"></div>
-                {% if image.type == "splash" %}
-                    <div class="foreground-image" id="img-{{ image.src }}">
+{% for image in site.data.parallax %}
+    <div class="foreground depth-{{ image.z }}">
+            <div class="buffer" id="buffer-{{ image.src }}"></div>
+            <div class="buffer {{ image.type }}">
+                <div class="foreground-image" id="img-{{ image.src }}">
+                    {% if image.src == "mapbox" %}
+                        {% include map.html %}
+                    {% else %}
                         <img src="assets/images/{{ image.src }}.JPG">
-                    </div>
-                {% else %}
-                    <div class="foreground-image {{ image.type }}" id="img-{{ image.src }}">
-                        <img src="assets/images/{{ image.src }}.JPG">
-                    </div>
-                {% endif %}
-            {% endif %}
-        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
     </div>
 {% endfor %}
 <div class="foreground depth-4">
-    <div class="buffer" id="buffer-overlay">
+    <div id="buffer-overlay">
         <span>Dan & Anna</span>&nbsp;<span class="hand bridesmaid scrawl-ccw">are getting married!</span>
     </div>
 </div>

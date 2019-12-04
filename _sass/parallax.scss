@@ -6,31 +6,7 @@
     overflow-y: scroll;
     perspective: 8px;
     perspective-origin: center;
-}
-
-.buffer {
-    width: 100%;
-}
-
-#buffer-overlay {
-    height: 15vh;
-    padding-left: 5vw;
-    padding-top: 1em;
-    font-size: 2em;
-
-    span:first-of-type {
-        font-family: $f-header;
-        text-transform: uppercase;
-        opacity: 0%;
-    }
-}
-
-#buffer-202 {
-    height: 6em;
-}
-
-#buffer-146 {
-    height: 35vh;
+    scroll-snap-type: y mandatory;
 }
 
 .foreground {
@@ -61,35 +37,9 @@
 }
 
 .foreground-image {
-    display: flex;
     position: relative;
     border-radius: 0.5em;
     overflow: hidden;
-    margin-left: 3vw;
-    margin-right: 3vw;
-}
-
-#img-202 {
-    height: 90vh;
-
-    img {
-        bottom: 0;
-        left: 50%;
-        transform-origin: bottom center;
-        transform: translate(-50%, 5%) scale(0.25);
-    }
-}
-
-#img-146 {
-    height: 80vh;
-    width: 30vw;
-
-    img {
-        bottom: 0;
-        left: 50%;
-        transform-origin: bottom center;
-        transform: translate(-50%, 3.5%) scale(0.18);
-    }
 }
 
 .left {
@@ -105,4 +55,73 @@
 .right {
     display: flex;
     justify-content: flex-end;
+}
+
+#buffer-overlay {
+    height: 15vh;
+    padding-left: $nav-padding;
+    padding-top: 1em;
+    font-size: 2em;
+
+    span:first-of-type {
+        font-family: $f-header;
+        text-transform: uppercase;
+        opacity: 0%;
+    }
+}
+
+#buffer-202 {
+    height: 6em;
+}
+
+#buffer-146 {
+    height: 150vh;
+}
+
+#buffer-mapbox {
+    height: 304vh;
+}
+
+#buffer-132 {
+    height: 390vh;
+}
+
+#img-202 {
+    height: 90vh;
+
+    img {
+        bottom: 0;
+        left: 50%;
+        transform-origin: bottom center;
+        transform: translate(-50%, 5%) scale(0.25);
+    }
+}
+
+#img-146 {
+    height: 80vh;
+    width: 30%;
+
+    img {
+        bottom: 0;
+        left: 50%;
+        transform-origin: bottom center;
+        transform: translate(-50.5%, 3.4%) scale(0.16);
+    }
+}
+
+#img-mapbox {
+    height: 80vh;
+    width: 100%;
+}
+
+#img-132 {
+    height: 80vh;
+    width: 60%;
+
+    img {
+        bottom: 0;
+        left: 50%;
+        transform-origin: bottom center;
+        transform: translate(-49.5%, 0%) scale(0.16);
+    }
 }

@@ -17,8 +17,13 @@ body {
     font-weight: 200;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-weight: inherit;
+}
+
+h2, h3 {
+    font-family: $f-header;
+    font-weight: 300;
 }
 
 #overlay {
