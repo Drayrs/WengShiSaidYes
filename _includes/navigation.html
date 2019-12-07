@@ -2,12 +2,12 @@
     <h1>Dan & Anna</h1>
     <nav class="spacer">
         {% for item in site.data.navigation %}
-            <a href="{{ item.link }}" id="link-{{ item.name | downcase }}">
+            <span class="link" id="link-{{ item.name | downcase }}">
                 {{ item.name }}
                 <!--<div class="mask">
                     <span>{{ item.name }}</span>
                 </div>-->
-            </a>
+            </span>
         {% endfor %}
     </nav>
 </section>
