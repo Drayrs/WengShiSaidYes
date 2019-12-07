@@ -1,4 +1,8 @@
 collections:
+  bkg-content:
+
+kramdown:
+  auto_ids: false
 
 defaults:
   - scope:

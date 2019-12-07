@@ -11,42 +11,13 @@
     <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
   </head>
   <body>
-      <div class="parallax-container">
-          <div class="background bg1">
-              <div class="buffer snap" id="buffer-splash"></div>
-              <div class="buffer snap" id="buffer-when"></div>
-              <div class="buffer" id="content-when">
-                  <div class="placeholder"></div>
-                  <div class="content">
-                      <h1 id="date" class="hand scrawl-ccw anna">Sunday, June 28th, 2020</h1>
-                      <h2 id="time" class="hand scrawl-ccw bridesmaid">4.30 pm ~ 11.30 pm</h2>
-                  </div>
-              </div>
-              <div class="buffer snap" id="buffer-where"></div>
-              <div class="buffer snap" id="buffer-hotel"></div>
-              <div class="buffer" id="content-hotel">
-                  <div class="placeholder"></div>
-                  <div class="content">
-                      <h2 class="anna">Accommodations</h2>
-                      <p>Rooms are reserved at the <b>Comfort Inn & Suites</b> in <b>Bowmanville</b>, in case guests require an overnight stay after the reception.</p>
-                      <p>In order to transport guests to and from the wedding there will be a bus travelling between the venue and hotel.</p>
-                      <div class="buffer">
-                          <div class="event-times"><div>3:30 pm</div><div>11:00 pm</div></div>
-                          <div class="events"><div>Bus leaves hotel for wedding</div><div>Bus leaves venue to return to hotel</div></div>
-                      </div>
-                  </div>
-              </div>
-              <div class="buffer" id="buffer-faq"></div>
-              <div class="buffer">
-                  <div class="content"></div>
-                  <div class="placeholder"></div>
-              </div>
-          </div>
+      <div id="parallax-container" class="bg1 slider">
+          {% include background.html %}
           {% include foreground.html %}
       </div>
       {% include navigation.html %}
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="assets/js/jquery.serialize-object.min.js"></script>
       <script src="assets/js/wengshisaidyes.js"></script>
-      <!-- Marker by Alex Auda Samora from the Noun Project -->
   </body>
 </html>

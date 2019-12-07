@@ -1,13 +1,16 @@
-$bg1:        #fff;
+$bg1:               #fff;
 
-$col-header: #222;
-$col-header-diff: #ddd;
-$col-anna:   #92374d;
-$col-anna-diff: #6dc8b1;
-$col-maid1-diff: #155252;
-$col-dan:    #cce8cc;
-$col-maid1:  #eaadad;
-$col-maid2:  #b78278;
+$col-text:          #222;
+$col-anna:          #92374d;
+$col-maid1:         #eaadad;
+$col-dan:           #00a676;
+
+$col-text-diff:     #ddd;
+$col-anna-diff:     #6dc8b1;
+$col-maid1-diff:    #155252;
+$col-dan-diff:      #ff5989;
+
+$col-maid2:         #b78278;
 
 $f-header: 'Work Sans', sans-serif;
 $f-hand: 'Caveat', cursive;
@@ -15,28 +18,43 @@ $f-hand: 'Caveat', cursive;
 body {
     font-family: $f-header;
     font-weight: 200;
+    color: $col-text;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: inherit;
 }
 
-h2, h3 {
+h2, h3, h4 {
     font-family: $f-header;
     font-weight: 300;
 }
 
-#overlay {
-    color: $col-header-diff;
+em {
+    font-weight: 300;
+    font-style: normal;
+}
 
-    .mask {
+#navigation-bar {
+    color: $col-text-diff;
+
+    a:hover {
         color: $col-maid1-diff;
+    }
+
+    .rolled-over {
+        color: $col-maid1-diff;
+        border-bottom: 1px solid $col-maid1-diff;
     }
 }
 
 a, a:visited, a:hover, a:active {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
+}
+
+.foreground-image {
+        background: #eaadad;
 }
 
 .hand {

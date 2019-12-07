@@ -1,5 +1,6 @@
 $outside-padding: 3vw;
 $nav-padding: 5vw;
+$nav-height: 15vh;
 
 * {
     box-sizing: border-box;
@@ -13,7 +14,11 @@ body {
     font-size: 2.5vh;
 }
 
-h1, h2, h3, p {
+form {
+    font-size: 2.5vh;
+}
+
+h1, h2, h3, h4, p {
     padding: 0;
     margin: 0;
 }
@@ -26,6 +31,23 @@ h2 {
     font-size: 2em;
 }
 
+h3, h4 {
+    font-size: 1em;
+}
+
+.gap {
+    width: 100%;
+}
+
+.nav-spacer {
+    height: $nav-height;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
 .background {
     position: absolute;
     top: 0;
@@ -33,15 +55,11 @@ h2 {
     right: 0;
     transform: translateZ(0px);
 
-    .buffer {
-        display: flex;
-        flex-direction: row;
+    .content-wrapper {
+        margin-left: $outside-padding;
+        margin-right: $outside-padding;
+        height: 100vh - $nav-height;
     }
-}
-
-.buffer {
-    margin-left: $outside-padding;
-    margin-right: $outside-padding;
 }
 
 .snap {
@@ -50,40 +68,58 @@ h2 {
 
 .placeholder {
     flex-grow: 0;
-    margin-left: 0;
-    margin-right: 2em;
 }
 
 .content {
     flex: 1 1 0;
     text-align: left;
+    margin-left: $nav-padding - $outside-padding;
+    margin-right: $nav-padding;
 
     h2 {
+        @extend .anna;
         text-transform: uppercase;
         font-size: 1.5em;
         margin-bottom: 1em;
     }
 
-    p {
-        margin-bottom: 0.5em;
+    h3 {
+        font-weight: 400;
+        margin-top: 1em;
+    }
+
+    h3, h4, p {
+        margin-bottom: 0.25em;
+    }
+
+    h4 {
+        margin-top: 0.5em;
+        margin-left: $nav-padding / 2;
+    }
+
+    h4 ~ p {
+        margin-left: $nav-padding / 2;
     }
 }
 
-.content + .placeholder {
-    margin-left: 1em;
-    margin-right: 0;
+.placeholder + .content {
+    margin-left: $nav-padding;
+    margin-right: $nav-padding - $outside-padding;
 }
 
-#buffer-splash {
-    height: 100vh;
+.schedule {
+    display: flex;
+    margin-top: 1em;
 }
 
-#buffer-when {
-    height: 40vh;
+.event-times {
+    text-align: right;
+    margin-right: 1em;
+    color: #92374d;
 }
 
 #content-when {
-    height: 40vh;
+    font-size: 3em;
 
     .placeholder {
         width: 30%;
@@ -92,21 +128,27 @@ h2 {
     .content {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
+    }
+
+    h2 {
+        @extend .hand;
+        @extend .scrawl-ccw;
+        @extend .anna;
+        text-transform: none;
+        margin: 0;
+    }
+
+    h3 {
+        @extend .hand;
+        @extend .scrawl-ccw;
+        @extend .bridesmaid;
+        margin: 0;
     }
 }
 
-#buffer-where {
-    height: 100vh;
-}
-
-#buffer-hotel {
-    height: 15vh;
-}
-
 #content-hotel {
-    height: 85vh;
 
     .content {
         display: flex;
@@ -119,14 +161,54 @@ h2 {
     }
 }
 
-.event-times {
-    text-align: right;
-    margin-right: 1em;
-    color: #92374d;
+#content-faq {
+
+    .placeholder {
+        width: 60vh;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
-#buffer-faq {
-    height: 100vh;
+#content-footer {
+    align-items: flex-end;
+    margin: 0;
+}
+
+#footer {
+    flex: 1 1 0;
+    height: $nav-height;
+    padding-left: $nav-padding;
+    padding-right: $nav-padding;
+    background-color: #222;
+    box-shadow: inset 0 1vh 1vh #0004;
+    color: $bg1;
+    display: flex;
+    align-items: center;
+
+    ul {
+        list-style: none;
+        flex: 1 1 0;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    li {
+        margin-bottom: 0.2em;
+    }
+
+    ul:first-child {
+        text-align: left;
+    }
+
+    ul:last-child {
+        text-align: right;
+    }
 }
 
 #img-nwi {

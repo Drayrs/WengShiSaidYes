@@ -1,8 +1,9 @@
-.parallax-container {
+#parallax-container {
     position: relative;
+    left: 0;
+    top: 0;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
     overflow-y: scroll;
     perspective: 8px;
     perspective-origin: center;
@@ -13,7 +14,6 @@
     position: absolute;
     width: 100%;
     transform-origin: center 50vh;
-    z-index: 1;
 
     img {
         position: absolute;
@@ -22,6 +22,7 @@
 
 .depth-1 {
     transform: translateZ(1px) scale(0.875);
+    z-index: 99;
 }
 
 .depth-2 {
@@ -42,18 +43,23 @@
     overflow: hidden;
 }
 
+%foreground-layout {
+    padding-left: $outside-padding;
+    padding-right: $outside-padding;
+}
+
 .left {
-    display: flex;
+    @extend %foreground-layout;
     justify-content: flex-start;
 }
 
 .center {
-    display: flex;
+    @extend %foreground-layout;
     justify-content: center;
 }
 
 .right {
-    display: flex;
+    @extend %foreground-layout;
     justify-content: flex-end;
 }
 
@@ -71,23 +77,36 @@
 }
 
 #buffer-202 {
-    height: 6em;
+    height: 15.9vh;
 }
 
 #buffer-146 {
-    height: 150vh;
+    height: 149.3vh;
 }
 
 #buffer-mapbox {
-    height: 304vh;
+    height: 244.6vh;
 }
 
 #buffer-132 {
-    height: 390vh;
+    height: 495.9vh;
+}
+
+#buffer-109 {
+    height: 532.15vh;
+}
+
+#buffer-22 {
+    height: 816vh;
+}
+
+#buffer-57 {
+    height: 797.5vh;
 }
 
 #img-202 {
     height: 90vh;
+    width: 100%;
 
     img {
         bottom: 0;
@@ -123,5 +142,42 @@
         left: 50%;
         transform-origin: bottom center;
         transform: translate(-49.5%, 0%) scale(0.16);
+    }
+}
+
+#img-109 {
+    height: 102.5vh;
+    width: 100%;
+
+    img {
+        bottom: 0;
+        left: 50%;
+        transform-origin: bottom center;
+        transform: translate(-50%, 0%) scale(0.24);
+    }
+}
+
+#img-22 {
+    height: 90vh;
+    width: 60vh;
+
+    img {
+        bottom: 0;
+        left: 50%;
+        transform-origin: bottom center;
+        transform: translate(-50%, 0%) scale(0.12);
+    }
+}
+
+#img-57 {
+    height: 102.5vh - $nav-height;
+    width: 100%;
+    border-radius: 0.5em 0.5em 0 0;
+
+    img {
+        bottom: 0;
+        left: 50%;
+        transform-origin: bottom center;
+        transform: translate(-50%, 3%) scale(0.235);
     }
 }
