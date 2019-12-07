@@ -1,13 +1,16 @@
-<div id="overlay">
+<section id="navigation-bar" class="overlay slider">
     <h1>Dan & Anna</h1>
     <nav class="spacer">
         {% for item in site.data.navigation %}
-            <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
-                <span>{{ item.name }}</span>
-                <div class="mask">
+            <a href="{{ item.link }}" id="link-{{ item.name | downcase }}">
+                {{ item.name }}
+                <!--<div class="mask">
                     <span>{{ item.name }}</span>
-                </div>
+                </div>-->
             </a>
         {% endfor %}
     </nav>
-</div>
+</section>
+<section id="rsvp-pane" class="overlay slider">
+    {% include form.html %}
+</section>

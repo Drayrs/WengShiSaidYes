@@ -1,7 +1,7 @@
 {% for image in site.data.parallax %}
     <div class="foreground depth-{{ image.z }}">
-            <div class="buffer" id="buffer-{{ image.src }}"></div>
-            <div class="buffer {{ image.type }}">
+            <div class="gap" id="buffer-{{ image.src }}"></div>
+            <div class="content-wrapper {{ image.type }}">
                 <div class="foreground-image" id="img-{{ image.src }}">
                     {% if image.src == "mapbox" %}
                         {% include map.html %}

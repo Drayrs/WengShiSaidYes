@@ -4,7 +4,7 @@ var map = new mapboxgl.Map({
   container: 'nwi-map',
   style: 'mapbox://styles/drayrs/ck3qc6nb37k7r1cru0qe29swc',
   center: [-78.887, 44.139],
-  zoom: 8,
+  zoom: 9,
   scrollZoom: false,
   boxZoom: true
 });
@@ -36,7 +36,7 @@ var geojson = {
         link: 'accommodations',
         title: 'Comfort Inn & Suites',
         street: '35 Spicer Square',
-        town: 'Clarington',
+        town: 'Bowmanville',
         province: 'Ontario'
     }
     }]
@@ -80,7 +80,7 @@ function createPopUp(currentFeature) {
 
   var popup = new mapboxgl.Popup({ closeOnClick: false, closeButton: false })
     .setLngLat(currentFeature.geometry.coordinates)
-    .setHTML('<h3>' + currentFeature.properties.title + '</h3>' +
+    .setHTML('<p><b>' + currentFeature.properties.title + '</b></p>' +
     '<p>' + currentFeature.properties.street + '</p>' +
     '<p>' + currentFeature.properties.town + ', ' + currentFeature.properties.province + '</p>')
     .addTo(map);
